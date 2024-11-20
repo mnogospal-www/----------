@@ -1,13 +1,13 @@
 <?php
   require('functions.php');
   
-  function createSelect($data) {
+  function createSelect($teachers) {
     $layout = "";
 
-    foreach($data as $item) {
-      $fullName = "{$item["name"]} {$item["surname"]}";
+    foreach($teachers as $teacher) {
+      $fullName = "{$teacher["name"]} {$teacher["surname"]}";
       $layout .= "
-        <option value='{$item["id"]}'>$fullName</option>
+        <option value='{$teacher["id"]}'>$fullName</option>
       ";
     }
 
